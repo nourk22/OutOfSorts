@@ -8,7 +8,7 @@ public class Sorts{
   public static void bubbleSort(int[] data){
     boolean isSorted=false;
 
-    if (data.length>2){
+    if (data.length>=2){
       int num_swaps=0;
 
       while (! isSorted){
