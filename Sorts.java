@@ -30,6 +30,8 @@ public class Sorts{
 
         if (num_swaps==0){
           isSorted=true;
+        }else{
+          num_swaps=0;
         }
       }
     }
