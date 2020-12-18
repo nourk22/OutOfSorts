@@ -1,20 +1,17 @@
 public class Sorts{
+
   /**Bubble sort of an int array.
   *@postcondition The array will be modified such that the elements will be in increasing order.
   *@param data  the elements to be sorted.
   */
+
   public static void bubbleSort(int[] data){
     boolean isSorted=false;
 
-
-    if (data.length<2){
-      isSorted=true;
-
-    }else{
+    if (data.length>2){
       int num_swaps=0;
 
       while (! isSorted){
-
         for (int i=0; i<data.length-1; i++){
           //holders
           int curr=data[i];
@@ -35,6 +32,37 @@ public class Sorts{
         }
       }
     }
-
   }
+
+  /**selection sort of an int array.
+  *@postcondition The array will be modified such that the elements will be in increasing order.
+  *@param data - the elements to be sorted.
+  */
+
+   public static void selectionSort(int[] data){
+     for (int i=0; i<data.length; i++){
+       int smallest = data[i];
+       int smallestIndex=i;
+
+       //find smallest value
+       for (int j=i; j<data.length; j++){
+         if (data[j]<smallest){
+           smallest=data[j];
+           smallestIndex=j;
+         }
+       }
+
+       //swap
+       data[smallestIndex]=data[i];
+       data[i]=smallest;
+     }
+   }
+
+   /**insertion sort of an int array.
+  *@postcondition The array will be modified such that the elements will be in increasing order.
+  *@param data - the elements to be sorted.
+  */
+
+   public static void insertionSort(int[] data){
+   }
 }
