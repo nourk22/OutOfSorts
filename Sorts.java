@@ -63,29 +63,24 @@ public class Sorts{
   *@param data - the elements to be sorted.
   */
 
-   public static void insertionSort(int[] data){
-     if (data.length>0){
+  public static void insertionSort(int[] data){
+     for (int i=1; i<data.length; i++){
+       int holder=0;
 
-       for (int i=1; i<data.length; i++){
-         int holder=0;
+       //compare
+       if (data[i-1]>data[i]){
+         holder=data[i];
 
-         //compare
-         if (data[i-1]>data[i]){
-           holder=data[i];
-
-           //shift, find right spot, insert
-           for (int j=i; j>=0; j--){
-             if (j!=0){
-               data[j]=data[j-1];
-             }
-
-             if (holder>data[j] || j==0){
-               data[j]=holder;
-               break;
-             }
-
+         //shift, find right spot, insert
+         for (int j=i; j>=0; j--){
+           if (j!=0){
+             data[j]=data[j-1];
            }
 
+           if (holder>data[j] || j==0){
+             data[j]=holder;
+             break;
+           }
          }
        }
      }
