@@ -64,5 +64,24 @@ public class Sorts{
   */
 
    public static void insertionSort(int[] data){
+     int holder;
+
+     if (data.length>0){
+
+       for (int i=0; i<data.length-1; i++){
+
+         //compare
+         if (data[i]>data[i-1]){
+           holder=data[i];
+
+           //shift, find right spot, insert
+           for (int j=0; j<i; j++){
+             if (holder<data[j]){
+
+             }
+           }
+         }
+       }
+     }
    }
 }
