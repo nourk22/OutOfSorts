@@ -34,7 +34,11 @@ public class Driver{
         }
 
       }else if(args[2].equals("reversed")){
-	      System.out.println("REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+        int number = rand.nextInt();
+        for (int i=0; i<randData.length; i++){
+          randData[i] = number;
+          number --;
+        }
       }
 
       if(args[1].equals("bubble")){
