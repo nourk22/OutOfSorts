@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.Random;
+
 public class Driver{
   public static void main(String[]args){
     if(args.length < 2){
@@ -9,12 +11,21 @@ public class Driver{
 
 
       int[] randData = new int[Integer.parseInt(args[0])];
+      //instantiate
+      Random rand = new Random();
 
       //overhead: 1 random array generation.
       if(args.length < 3 || args[2].equals("random")){
-	      System.out.println("REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+        for (int i=0; i<randData.length; i++){
+          randData[i] = rand.nextInt();
+        }
+
       }else if(args[2].equals("equal")){
-	      System.out.println("REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
+	      int val = rand.nextInt();
+        for (int i=0; i<randData.length; i++){
+          randData[i] = val;
+        }
+
       }else if(args[2].equals("sorted")){
 	      System.out.println("REPLACE THIS LINE WITH ARRAY VALUE GENERATION!");
       }else if(args[2].equals("reversed")){
