@@ -64,25 +64,18 @@ public class Sorts{
   */
 
   public static void insertionSort(int[] data){
-     for (int i=1; i<data.length; i++){
-       int holder=0;
+    int curr, index;
 
-       //compare
-       if (data[i-1]>data[i]){
-         holder=data[i];
+    for (int i=1; i<data.length; i++){
+      curr = data[i];
+      index = i-1;
 
-         //shift, find right spot, insert
-         for (int j=i; j>=0; j--){
-           if (j!=0){
-             data[j]=data[j-1];
-           }
+      while (index >= 0  && data[index] > curr){
+        data[index+1]=data[index];
+        index --;
+      }
 
-           if (holder>data[j] || j==0){
-             data[j]=holder;
-             break;
-           }
-         }
-       }
+      data[index+1]=curr;
      }
    }
-}
+ }
